@@ -1,0 +1,81 @@
+# Logs
+logs/
+*.log
+
+# Reports
+reports/
+*.html
+*.json
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Cache directories
+.npm/
+.eslintcache
+.cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Screenshots and videos (if enabled)
+screenshots/
+videos/
+traces/
+
+# Docker
+.dockerignore
+
+# Test artifacts
+cucumber-report.*
+health-check.json
+health-status.txt
+
+# Editor backups
+*~
+*.bak
+*.orig
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# ESLint cache
+.eslintcache
+
+# TypeScript cache
+*.tsbuildinfo

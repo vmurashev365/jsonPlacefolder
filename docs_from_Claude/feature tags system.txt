@@ -1,0 +1,2 @@
+@smoke @positive @negative @e2e @crud @validation @performance
+@posts @users @comments @albums @photos
