@@ -43,5 +43,29 @@ module.exports = {
     '--parallel 3',
     '--retry 2',
     '--exit'
+  ].join(' '),
+  
+  verbose: [
+    'features/**/*.feature',
+    '--require-module ts-node/register',
+    '--require src/hooks/**/*.ts',
+    '--require src/steps/**/*.ts',
+    '--format @cucumber/pretty-formatter',
+    '--format json:reports/verbose-report.json',
+    '--parallel 1',
+    '--retry 0',
+    '--exit'
+  ].join(' '),
+  
+  debug: [
+    'features/**/*.feature',
+    '--require-module ts-node/register',
+    '--require src/hooks/**/*.ts',
+    '--require src/steps/**/*.ts',
+    '--format @cucumber/pretty-formatter',
+    '--format json:reports/debug-report.json',
+    '--parallel 1',
+    '--retry 0',
+    '--exit'
   ].join(' ')
 };

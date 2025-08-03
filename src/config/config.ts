@@ -1,33 +1,33 @@
 import { config } from 'dotenv';
 import path from 'path';
 
-// Load environment variables
+// Load environment variables from .env file
 config({ path: path.resolve(process.cwd(), '.env') });
 
 export interface Config {
-  baseUrl: string;
-  timeout: number;
-  logLevel: string;
-  logToFile: boolean;
-  logFilePath: string;
-  parallel: number;
-  retryCount: number;
-  tags: string;
-  generateHtmlReport: boolean;
-  generateJsonReport: boolean;
-  reportTitle: string;
-  reportTheme: string;
-  performanceTimeout: number;
-  concurrentRequests: number;
-  loadTestDuration: number;
-  enableScreenshots: boolean;
-  enableVideos: boolean;
-  enableTraces: boolean;
-  ci: boolean;
-  githubActions: boolean;
-  apiKey?: string;
-  authToken?: string;
-  testUserId: number;
+  baseUrl: string;                    // API base URL
+  timeout: number;                    // Request timeout in milliseconds
+  logLevel: string;                   // Logging level (debug, info, warn, error)
+  logToFile: boolean;                 // Whether to log to file
+  logFilePath: string;                // Path to log file
+  parallel: number;                   // Number of parallel workers
+  retryCount: number;                 // Number of test retries
+  tags: string;                       // Test tags filter
+  generateHtmlReport: boolean;        // Generate HTML test report
+  generateJsonReport: boolean;        // Generate JSON test report
+  reportTitle: string;                // Report title
+  reportTheme: string;                // Report theme
+  performanceTimeout: number;         // Performance test timeout
+  concurrentRequests: number;         // Number of concurrent requests for load testing
+  loadTestDuration: number;           // Load test duration in milliseconds
+  enableScreenshots: boolean;         // Enable screenshots on failure
+  enableVideos: boolean;              // Enable video recording
+  enableTraces: boolean;              // Enable traces
+  ci: boolean;                        // Running in CI environment
+  githubActions: boolean;             // Running in GitHub Actions
+  apiKey?: string;                    // Optional API key
+  authToken?: string;                 // Optional authentication token
+  testUserId: number;                 // Default user ID for tests
   testPostId: number;
   testCommentId: number;
   healthCheckTimeout: number;

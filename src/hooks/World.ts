@@ -31,7 +31,7 @@ export class CustomWorld extends World {
     });
   }
 
-  // Test data management
+  // Test data management methods
   setTestData(key: string, value: any): void {
     this.context.testData[key] = value;
     this.logger.debug(`💾 Set test data: ${key}`, { value });
@@ -88,7 +88,7 @@ export class CustomWorld extends World {
     const passed = value !== null && value !== undefined;
     const assertionMessage = message || 'Value should not be null or undefined';
     
-    this.logger.assertion(assertionMessage, passed, 'not null', value);
+    this.logger.assertion(assertionMessage, passed, 'not null or undefined', value === null ? 'null' : value === undefined ? 'undefined' : 'defined');
     
     if (!passed) {
       throw new Error(assertionMessage);
@@ -99,7 +99,7 @@ export class CustomWorld extends World {
     const passed = Array.isArray(value);
     const assertionMessage = message || 'Value should be an array';
     
-    this.logger.assertion(assertionMessage, passed, 'array', typeof value);
+    this.logger.assertion(assertionMessage, passed, 'array', Array.isArray(value) ? 'array' : typeof value);
     
     if (!passed) {
       throw new Error(assertionMessage);
