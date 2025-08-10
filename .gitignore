@@ -4,8 +4,13 @@ logs/
 
 # Reports
 reports/
-*.html
-*.json
+report.html
+*.report.html
+
+# Specific JSON files to ignore
+health-check.json
+health-status.txt
+cucumber-report.json
 
 # Dependencies
 node_modules/
@@ -60,6 +65,27 @@ cucumber-report.*
 health-check.json
 health-status.txt
 
+# Allure artifacts and reports
+allure-results/
+allure-report/
+.allure/
+
+# Generated documentation files
+ALLURE_*.md
+FULL_TEST_EXECUTION_REPORT.md
+TEST_CASES_COUNT_ANALYSIS.md
+PROJECT_RESTORATION_SUMMARY.md
+TRANSLATION_SUMMARY.md
+*_SUMMARY.md
+*_REPORT.md
+
+# Keep important documentation
+!README.md
+!CONTRIBUTING.md
+!LICENSE.md
+!CHANGELOG.md
+!INSTALLATION.md
+
 # Editor backups
 *~
 *.bak
@@ -79,3 +105,24 @@ pids/
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Performance and debugging
+performance/
+debug/
+.vscode/settings.json
+.vscode/launch.json
+
+# OS and Editor specific
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Docker and deployment
+.docker/
+docker-compose.override.yml
+.env.local
+.env.production
